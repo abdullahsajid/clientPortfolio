@@ -70,6 +70,16 @@ nav{
     transform-origin: left;
     transform: scaleX(1);
 }
+.main-section{
+    background: url('./images/banner-img.jpg');
+    object-position: center center;
+    object-fit: fill;
+    image-rendering: auto;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding-bottom: 50px;
+}
 .main-section,.about,.services,.clients,.footer{
     padding-top: 50px;
     padding-left: 104px;
@@ -173,6 +183,10 @@ nav{
     display: flex;
     transform: translateY(0);
     transition: transform .3s ease-in-out;
+}
+.main-headOne-sy{
+    color: #fff;
+    background-color: #18272F;
 }
 @media screen and (max-width:450px) {
     .nav-items{
