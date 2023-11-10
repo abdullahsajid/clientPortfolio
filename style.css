@@ -17,6 +17,7 @@ body{
     position: sticky;
     top: 0;
     z-index: 10;
+    transition: all 0.3s;
 }
 nav{
     display: flex;
@@ -25,6 +26,7 @@ nav{
     height: 80px;
     width: 100%;
     padding: 16px 24px;
+    transition: all 0.3s;
 }
 .nav-logo{
     text-decoration: none;
@@ -51,8 +53,15 @@ nav{
     position: relative;
     cursor: pointer;
     color: #18272F;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    transition: all 0.3s;
 }
-.item::before{
+.item:hover{
+    transform: scale(1.1) rotate(5deg);
+}
+/* .item::before{
     content: '';
     position: absolute;
     width: 100%;
@@ -69,7 +78,7 @@ nav{
 .item:hover::before{
     transform-origin: left;
     transform: scaleX(1);
-}
+} */
 .main-section{
     background: url('./images/banner-img.jpg');
     object-position: center center;
@@ -171,8 +180,7 @@ nav{
     display: none;
     flex-direction: column;
     transform: translateY(-200%);
-    transition: transform .3s ease-in-out;
-
+    transition: all 0.3s;
 }
 .resp-nav-items{
     display: flex;
@@ -182,7 +190,7 @@ nav{
 .mob-nav-active{
     display: flex;
     transform: translateY(0);
-    transition: transform .3s ease-in-out;
+    /* transition: transform .3s ease-in-out; */
 }
 .main-headOne-sy{
     color: #fff;
@@ -251,14 +259,26 @@ nav{
     }
     .hamburger{
         display: block;
+        background-color: #fff;
+        padding: 2px 5px;
+        border-radius: 10px;
+        transition: all 0.3s;
     }
     .resp-item{
         display: inline-block;
+        background-color: #fff;
+        padding: 5px 5px;
+        border-radius: 10px;
+        transition: all 0.3s;
+    }
+    .resp-item:hover{
+        transform: scale(1.1) rotate(5deg);
     }
     .mob-nav{
         padding-left: 24px;
     }
     .resp-mt{
         margin-top: 6px;
+        margin-bottom: 6px;
     }
 }
