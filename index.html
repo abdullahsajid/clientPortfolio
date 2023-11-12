@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ali Sajjad & Co</title>
+    <meta name="view-transition" content="same-origin">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swup/dist/css/swup.min.css" /> -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="swup">
     <div class="navbar">
         <nav>
             <div>
@@ -48,8 +50,8 @@
 
     
 
-    <div class="main-section mb-5" id="home">
-        <div class="resp-heading">
+    <div  class="main-section mb-5" id="home">
+        <div class="resp-heading transition-fade hidden">
             <span class="main-headOne theme--text--color">Ali Sajjad & Co.</span>
             <br>
             <span class="main-headOne theme--text--color main-headOne-sy">Cost & Management <br> Accountant Firm</span>
@@ -61,24 +63,30 @@
             <div class="col-12 mb-5 resp-about-head">
                 <h1 class="theme--text--color about-head">About</h1>
             </div>
-            <div class="col-12 col-md-6 col-lg-6" style="height: min-content;">
-                <img src="./images/about-img.jpg" alt="" class="w-100 h-100 about-img">
-            </div>
-            <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center">
-                <p class="theme--text--color about-para">
-                    We’re best in our field and it’s all Thanks to the incredible relationships We’ve formed with our clients. Get in touch with us when you’re ready to learn more; We can’t wait to meet you!
-                </p>
+            <div class="row sm-rev-col" style="padding-right: 0;">
+                <div class="col-12 col-md-6 col-lg-6" style="height: min-content; padding-right: 0;">
+                    <img src="./images/about-img.jpg" alt="" class="w-100 h-100 about-img hidden">
+                </div>
+                <div class="col-12 col-md-6 col-lg-6 d-flex align-items-center justify-content-center flex-column" style="padding-right: 0;">
+                    <div class="mb-3">
+                        <img src="./images/user-img.jpg" class="user-img hidden">
+                    </div>
+                    <div class="theme--text--color about-main-heading">Management Consultants, Corporate & Tax Advisors</div>
+                    <p class="theme--text--color about-para" style="text-align: center;">
+                        We’re best in our field and it’s all Thanks to the incredible relationships We’ve formed with our clients. Get in touch with us when you’re ready to learn more. We can’t wait to meet you!
+                    </p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="services w-100" id="service">
+    <div class="services w-100 mb-5" id="service">
         <div class="row w-100">
             <div class="col-12 mb-5">
                 <h1 style="color: #fff;">Services</h1>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 mb-5 resp-card">
-                <div class="service--card">
+            <div class="col-12 col-md-4 col-lg-4 mb-5 resp-card" style="height: max-content;">
+                <div class="service--card hidden">
                     <div style="color: #fff;font-weight: 700; font-size: 1.3rem;" class="mb-3">
                         <!-- <img src="bs.png" style="width: 43px"> -->
                         Business Strategy Consultancy 
@@ -86,8 +94,8 @@
                     <div style="color: #fff;">We're here at Business Strategy Consultancy to help you reach your business goals and create a successful company.</div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 mb-5 resp-card">
-                <div class="service--card">
+            <div class="col-12 col-md-4 col-lg-4 mb-5 resp-card" style="height: max-content;">
+                <div class="service--card hidden">
                     <div style="color: #fff;font-weight: 700; font-size: 1.3rem;" class="mb-3">
                         <!-- <img src="as.png" style="width: 43px"> -->
                         Auditing Services
@@ -95,25 +103,53 @@
                     <div style="color: #fff;">Our Auditing Services carefully check your finances to make sure they're correct and follow the rules. Whether it's checking inside your company or for outside parties, we help you make smart money choices and earn trust</div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 mb-5 resp-card">
-                <div class="service--card">
+            <div class="col-12 col-md-4 col-lg-4 mb-5 resp-card" style="height: max-content;">
+                <div class="service--card hidden">
                     <div style="color: #fff;font-weight: 700; font-size: 1.3rem;" class="mb-3">Tax Consultancy Services  </div>
                     <div style="color: #fff;">We handle all your tax registration, filing, and reporting needs, ensuring compliance with tax regulations.</div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 mb-5 resp-card">
-                <div class="service--card">
+            <div class="col-12 col-md-4 col-lg-4 mb-5 resp-card" style="height: max-content;">
+                <div class="service--card hidden">
                     <div style="color: #fff;font-weight: 700; font-size: 1.3rem;" class="mb-3">Bookkeeping Services</div>
                     <div style="color: #fff;">We manage your financial records and transactions, keeping them organized and accurate. This helps you have a clear view of your finances and make informed decisions.</div>
                 </div>
             </div>
-            <div class="col-12 col-md-4 col-lg-4 resp-card">
-                <div class="service--card">
+            <div class="col-12 col-md-4 col-lg-4 resp-card" style="height: max-content;">
+                <div class="service--card hidden">
                     <div style="color: #fff;font-weight: 700; font-size: 1.3rem;" class="mb-3">Company Law Consultancy</div>
                     <div style="color: #fff;">We provide expert guidance on legal matters for your company, ensuring you follow the right laws and regulations. Our advice helps your business operate smoothly within legal boundaries.</div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="team">
+        <div class="row w-100">
+            <div class="col-12 mb-3">
+                <div>
+                    <h1 class="theme--text--color">Our Team</h1>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 position-relative mb-3">
+                <div class="w-100">
+                    <img src="./images/first.jpg" alt="Adil Ameen" class="w-100 team-img hidden">
+                </div>
+                <div class="after-details">teamone@gmail.com</div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 position-relative mb-3">
+                <div class="w-100">
+                    <img src="./images/second.jpg" alt="Khuram Shazad" class="w-100 team-img hidden">
+                </div>
+                <div class="after-details">teamtwo@gmail.com</div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-4 position-relative mb-3">
+                <div class="w-100">
+                    <img src="./images/user-4.jpg" alt="Muhammad Kamal Asgher" class="w-100 team-img hidden">
+                </div>
+                <div class="after-details resp-after-details">teamthird@gmail.com</div>
+            </div>
+        </div>        
     </div>
 
     <!-- <div class="clients w-100" id="client">
@@ -211,6 +247,8 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/swup@4"></script>
+    <!-- <script src="https://unpkg.com/swup/dist/js/swup.min.js"></script> -->
     <script src="script.js"></script>
 </body>
 </html>

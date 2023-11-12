@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     font-family: "Roboto",serif;
@@ -17,6 +18,8 @@ body{
     position: sticky;
     top: 0;
     z-index: 10;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 11px 10px -17px #111;
     transition: all 0.3s;
 }
 nav{
@@ -92,6 +95,10 @@ nav{
 .main-section,.about,.services,.clients,.footer{
     padding-top: 50px;
     padding-left: 104px;
+}
+.team{
+    padding-top: 50px;
+    padding-left: 90px;
 }
 .about{
     padding-bottom: 50px;
@@ -196,6 +203,65 @@ nav{
     color: #fff;
     background-color: #18272F;
 }
+.user-img{
+    width: 100%;
+    height: 200px;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
+    object-fit: contain;
+    border: 1px solid #18272F;
+}
+.about-main-heading{
+    font-size: 18px;
+    margin-bottom: 3rem;
+    font-weight: 500;
+    background-color: #fff;
+    padding: 7px;
+    border-radius: 7px;
+    text-align: center;
+}
+.team-img{
+    border-radius: 10px;
+    object-fit: contain;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    /* height: 700px; */
+    width: 100%;
+    /* aspect-ratio: 1/0; */
+}
+.after-details{
+    background-color: #fff;
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 500;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+    width: max-content;
+}
+.hidden{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .8s;
+}
+.show{
+    opacity: 1;
+    transform: translateX(0%);
+}
+/* .transition-fade{
+    animation: mainHeading 500ms ease-in;
+}
+@keyframes mainHeading {
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }    
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+} */
 @media screen and (max-width:450px) {
     .nav-items{
         display: none;
@@ -203,7 +269,7 @@ nav{
     .item{
         display: none;
     }
-    .main-section,.about,.services,.clients{
+    .main-section,.about,.services,.clients,.team{
         padding-left: 0;
     }
     .footer{
@@ -227,7 +293,7 @@ nav{
         border-top-right-radius: 35px;
         border-top-left-radius: 35px;
     }
-    .services,.clients{
+    .services,.clients,.team{
         display: flex;
         align-items: center;
         justify-content: center;
@@ -280,5 +346,15 @@ nav{
     .resp-mt{
         margin-top: 6px;
         margin-bottom: 6px;
+    }
+    .sm-rev-col{
+        flex-direction: column-reverse;
+    }
+    .about-para{
+        font-size: 25px;
+        margin-bottom: 2rem;
+    }
+    .resp-after-details{
+        width: max-content;
     }
 }
